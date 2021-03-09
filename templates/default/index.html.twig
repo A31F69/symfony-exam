@@ -1,0 +1,30 @@
+{% extends 'default/layout.html.twig' %}
+
+{% block header %}
+
+	<h1>{{ 'un titre magnifique' |title }}</h1>
+
+{% endblock %}
+
+{% block content %}
+
+	<section class="contact">
+
+		{% for contact in contacts %}
+
+
+			<table>
+				<tr>
+					<td>{{ contact.email }}</td>
+
+					<td>{{ contact.subject }}</td>
+
+					<td>{{ contact.message }}</td>
+				</tr>
+			</table>
+
+		{% endfor %}
+
+	</section>
+
+{% endblock %}
